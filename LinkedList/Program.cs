@@ -17,6 +17,8 @@ namespace LinkedList
             linklist.Display(); 
             linklist.RemoveFirstElement();
             linklist.Display();
+            linklist.RemoveLastElement();
+            linklist.Display();
         }
     }
 }

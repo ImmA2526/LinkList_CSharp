@@ -95,5 +95,26 @@ namespace LinkedList
             }
             head = head.next;
         }
+
+        /// <summary>
+        /// Remove the Last Element.
+        /// </summary>U5-Remove First Element ...
+        /// <param name="Position">The position.</param>
+        /// <param name="data">The data.</param>
+        internal void RemoveLastElement()
+        {
+            if (this.head ==null)
+            {
+                Console.WriteLine("Empty");
+            }
+            if (head.next == null)
+            {
+                Console.WriteLine("ok");
+            }
+            Node SecondNode = head;
+            while (SecondNode.next.next != null)
+                SecondNode = SecondNode.next;
+            SecondNode.next = null;
+        }
     }
 }
