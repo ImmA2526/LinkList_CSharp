@@ -15,6 +15,8 @@ namespace LinkedList
             linklist.Display(); 
             linklist.InsertPositon(4, 110);
             linklist.Display(); 
+            linklist.RemoveFirstElement();
+            linklist.Display();
         }
     }
 }

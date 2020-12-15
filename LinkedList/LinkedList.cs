@@ -53,7 +53,6 @@ namespace LinkedList
         /// <param name="data">The data.</param>
         internal void InsertPositon(int Position, int data)
         {
-            
             if (Position < 1)
             {
                 Console.WriteLine("...Inalid...");
@@ -81,6 +80,20 @@ namespace LinkedList
                 if (Position != 1)
                     Console.WriteLine("Positon is not valid...");
             }
+        }
+
+        /// <summary>
+        /// Remove the First Element.
+        /// </summary>U5-Remove First Element ...
+        /// <param name="Position">The position.</param>
+        /// <param name="data">The data.</param>
+        internal void RemoveFirstElement()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Linklist Empty");
+            }
+            head = head.next;
         }
     }
 }
