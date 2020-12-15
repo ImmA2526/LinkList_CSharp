@@ -8,7 +8,7 @@ namespace LinkedList
         internal Node head;
 
         /// <summary>
-        /// U1 Add the specified data in Linkelsit.
+        /// U2 Ability to Create Linkedlist.
         /// </summary>
         /// <param name="data">The data.</param>
         internal void Add(int data)
