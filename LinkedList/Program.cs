@@ -12,7 +12,9 @@ namespace LinkedList
             linklist.Add(70);
             linklist.Add(120);
             Console.Write("list Elements Are : ");
-            linklist.Display();  
+            linklist.Display(); 
+            linklist.InsertPositon(4, 110);
+            linklist.Display(); 
         }
     }
 }
