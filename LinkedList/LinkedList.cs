@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Text;
 namespace LinkedList
 {
-   public class LinkedList
-   {
+    public class LinkedLists
+    {
         internal Node head;
 
         /// <summary>
         /// U2-U3 Ability to Create Linkedlist.
         /// </summary>
         /// <param name="data">The data.</param>
-        internal void Add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -27,7 +27,7 @@ namespace LinkedList
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} Inserted Element in list ",node.data);
+            Console.WriteLine("{0} Inserted Element in list ", node.data);
         }
 
         internal void Display()
@@ -45,7 +45,7 @@ namespace LinkedList
             }
             Console.Write("\n");
         }
-        
+
         /// <summary>
         /// Inserts the positon.
         /// </summary>U4-Insert Element at Particular Position...
@@ -98,12 +98,12 @@ namespace LinkedList
 
         /// <summary>
         /// Remove the Last Element.
-        /// </summary>U5-Remove First Element ...
+        /// </summary>U6-Remove Last Element ...
         /// <param name="Position">The position.</param>
         /// <param name="data">The data.</param>
         internal void RemoveLastElement()
         {
-            if (this.head ==null)
+            if (this.head == null)
             {
                 Console.WriteLine("Empty");
             }
@@ -115,6 +115,25 @@ namespace LinkedList
             while (SecondNode.next.next != null)
                 SecondNode = SecondNode.next;
             SecondNode.next = null;
+        }
+
+        /// <summary>
+        ///U7 Finds the elemnt.
+        /// </summary>
+        /// <param name="Pointer">The pointer.</param>
+        /// <returns></returns>
+        public Node FindElemnt(int Number)
+        {
+            while (this.head != null)
+            {
+                if (this.head.data == Number)
+                {
+                    return this.head;
+                }
+                this.head = this.head.next;
+                Console.WriteLine("Element {0} Found in list...", this.head.data);
+            }
+            return null;
         }
     }
 }

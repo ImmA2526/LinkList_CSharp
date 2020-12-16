@@ -6,18 +6,13 @@ namespace LinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("**************Welcome To LinkelistProgram**************");
-        	LinkedList linklist = new LinkedList();
+        	LinkedLists linklist = new LinkedLists();
             linklist.Add(56);
             linklist.Add(30);
             linklist.Add(70);
-            linklist.Add(120);
             Console.Write("list Elements Are : ");
             linklist.Display(); 
-            linklist.InsertPositon(4, 110);
-            linklist.Display(); 
-            linklist.RemoveFirstElement();
-            linklist.Display();
-            linklist.RemoveLastElement();
+            linklist.FindElemnt(30);
             linklist.Display();
         }
     }
