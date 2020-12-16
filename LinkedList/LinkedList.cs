@@ -103,13 +103,9 @@ namespace LinkedList
         /// <param name="data">The data.</param>
         internal void RemoveLastElement()
         {
-            if (this.head == null)
-            {
-                Console.WriteLine("Empty");
-            }
             if (head.next == null)
             {
-                Console.WriteLine("ok");
+                Console.WriteLine("Empty");
             }
             Node SecondNode = head;
             while (SecondNode.next.next != null)
@@ -124,6 +120,22 @@ namespace LinkedList
         /// <returns></returns>
         public Node FindElemnt(int Number)
         {
+           /* bool flag = true;
+            int count = 1;
+            Node temp = head;
+            while (flag)
+            {
+                if (temp.data == Number)
+                {
+                    flag = false;
+                }
+                else
+                {
+                    temp = temp.next;
+                    count++;
+                }
+                return count;
+            }*/
             while (this.head != null)
             {
                 if (this.head.data == Number)

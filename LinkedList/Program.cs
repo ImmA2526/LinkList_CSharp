@@ -11,11 +11,12 @@ namespace LinkedList
             linklist.Add(30);
             linklist.Add(70);
             Console.Write("list Elements Are : ");
-            linklist.Display(); 
+            linklist.Display();
             linklist.FindElemnt(30);
             linklist.Display();
-            linklist.InsertPositon(3, 40);
-            linklist.Display();
+            //linklist.InsertPositon(3, 40);
+           // linklist.Display();*/
+            
         }
     }
 }
