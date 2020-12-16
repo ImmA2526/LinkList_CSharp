@@ -14,6 +14,8 @@ namespace LinkedList
             linklist.Display(); 
             linklist.FindElemnt(30);
             linklist.Display();
+            linklist.InsertPositon(3, 40);
+            linklist.Display();
         }
     }
 }

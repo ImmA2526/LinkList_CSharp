@@ -48,10 +48,10 @@ namespace LinkedList
 
         /// <summary>
         /// Inserts the positon.
-        /// </summary>U4-Insert Element at Particular Position...
+        /// </summary>U8-Insert 40 between 30 70 result like 30-->40-->70...
         /// <param name="Position">The position.</param>
         /// <param name="data">The data.</param>
-        internal void InsertPositon(int Position, int data)
+        public void InsertPositon(int Position, int data)
         {
             if (Position < 1)
             {
