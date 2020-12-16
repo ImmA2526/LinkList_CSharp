@@ -6,6 +6,7 @@ namespace LinkedList
     public class LinkedLists
     {
         internal Node head;
+        internal Node1 head1;
 
         /// <summary>
         /// U2-U3 Ability to Create Linkedlist.
@@ -164,6 +165,46 @@ namespace LinkedList
                 temp = temp.next;
             }
             return count;
+        }
+
+        /// <summary>
+        /// Sort List And Display  the list Element.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        public void SortedList(int data)
+        {
+            Node1 newNode = new Node1(data);
+            Node1 Current;
+            if (head1 == null || head1.data >= newNode.data)
+            {
+                newNode.next = head1;
+                head1 = newNode;
+            }
+            else
+            {
+                Current = head1;
+                while (Current.next != null && Current.next.data < newNode.data)
+                    Current = Current.next;
+
+                newNode.next = Current.next;
+                Current.next = newNode;
+            }
+        }
+
+        internal void Display1()
+        {
+            Node1 temp = head1;
+            if (temp == null)
+            {
+                Console.Write("LinkedList is Emplty...");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.Write(temp.data + " -> ");
+                temp = temp.next;
+            }
+            Console.Write("\n");
         }
     }
 }
