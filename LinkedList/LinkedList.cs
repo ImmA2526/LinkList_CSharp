@@ -120,22 +120,6 @@ namespace LinkedList
         /// <returns></returns>
         public Node FindElemnt(int Number)
         {
-           /* bool flag = true;
-            int count = 1;
-            Node temp = head;
-            while (flag)
-            {
-                if (temp.data == Number)
-                {
-                    flag = false;
-                }
-                else
-                {
-                    temp = temp.next;
-                    count++;
-                }
-                return count;
-            }*/
             while (this.head != null)
             {
                 if (this.head.data == Number)
@@ -146,6 +130,40 @@ namespace LinkedList
                 Console.WriteLine("Element {0} Found in list...", this.head.data);
             }
             return null;
+        }
+
+        /// <summary>
+        ///U9 Delete the node And Return Size of list.
+        /// </summary>
+        /// <param name="Value">The value.</param>
+        public void DeleteNode(int Value)
+        {
+            Node temp = head, prev = null;
+            if (temp != null && temp.data == Value)
+            {
+                head = temp.next;
+                return;
+            }
+            while (temp != null && temp.data != Value)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+            if (temp == null)
+                return;
+            prev.next = temp.next;
+        }
+
+        public int Count()
+        {
+            Node temp = head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
         }
     }
 }

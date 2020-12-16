@@ -33,5 +33,20 @@ namespace Linklist
             Node Result = linklist.FindElemnt(40);
             Assert.AreEqual(40, Result.data);
         }
+
+        /// <summary>
+        /// 40 Givens the vlaue prsent then delete retutn count.
+        /// </summary>
+        [TestMethod]
+        public void GivenVlauePrsent_ThenDelete_RetutnCount()
+        {
+            linklist.Add(70);
+            linklist.Add(40);
+            linklist.Add(56);
+            linklist.Add(30);
+            linklist.DeleteNode(40);
+            int Result = linklist.Count(); 
+            Assert.AreEqual(3, Result);
+        }
     }
 }
